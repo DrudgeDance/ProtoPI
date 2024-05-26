@@ -28,6 +28,7 @@ Temporary Items
 
 
 # Project Directories and Files
+.env
 out
 dist
 node_modules
