@@ -4,14 +4,19 @@
   "private": true,
   "version": "0.0.1",
   "workspaces": [
-    "packages/*"
+    "packages/vscode/*",
+    "packages/website/*",
+    "packages/shared/*"
   ],
   "scripts": {
     "build": "yarn workspaces run build",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "start:website": "yarn workspaces foreach -p --all --include 'packages/website/*' run start"
   },
   "devDependencies": {
+    "@yarnpkg/plugin-workspace-tools": "^4.1.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.5"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }

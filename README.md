@@ -1,6 +1,6 @@
 # Monorepo
 
-Commands for scripts inside "extension-ProtoPI" folder:
+## Commands for scripts inside "vscode/extension-ProtoPI" folder:
 
 ```
 yarn workspace ProtoPI run vscode:prepublish
@@ -18,3 +18,20 @@ yarn workspace ProtoPI run vscode-test
 ```
 
 Note:  "ProtoPI" is taken from the package.json and NOT the folder name.
+
+
+```
+yarn run start:website
+```
+Express Port:  3000
+Webpack/React Port:  3030
+
+
+## Commands for scripts inside "website/back-express" folder:
+
+
+
+## Commands for scripts inside "website/front-react" folder:
+
+
+
