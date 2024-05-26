@@ -1,6 +1,6 @@
 {
-  "name": "ProtoPI-example",
-  "displayName": "ProtoPI-example",
+  "name": "template",
+  "displayName": "template",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -22,6 +22,7 @@
   "scripts": {
     "vscode:prepublish": "yarn run package",
     "compile": "yarn run check-types && yarn run lint && node esbuild.js",
+    "build": "yarn run compile",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
