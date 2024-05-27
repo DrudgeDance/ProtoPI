@@ -31,8 +31,12 @@ Temporary Items
 .env
 out
 dist
+public/dist/
 node_modules
 .vscode-test/
 *.vsix
 yarn.lock
 vsc-extension-quickstart.md
+
+# Ignore all of .yarn directory, except for Yarn plugins (if any)
+!.yarn/plugins
