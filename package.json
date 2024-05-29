@@ -4,16 +4,21 @@
   "private": true,
   "version": "0.0.1",
   "workspaces": [
-    "packages/vscode/*",
+    "packages/*",
     "packages/website/*",
     "packages/shared/*"
   ],
   "scripts": {
-    "build": "yarn workspaces run build",
-    "test": "yarn workspaces run test",
-    "start:website": "yarn workspaces foreach -p --all --include 'packages/website/*' run start"
+    "build": "yarn workspaces foreach --all run build",
+    "test": "yarn workspaces foreach --all run test",
+    "start:website": "yarn workspaces foreach -p --all --include 'packages/website/*' run start",
+    "cleanup": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + && find . -name \"dist\" -type d -prune -exec rm -rf '{}' + && yarn cache clean"
   },
   "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@yarnpkg/cli": "^4.2.2",
+    "@yarnpkg/core": "^4.0.5",
+    "@yarnpkg/plugin-git": "^3.0.0",
     "@yarnpkg/plugin-workspace-tools": "^4.1.0",
     "eslint": "^8.57.0",
     "tslib": "^2.3.1",

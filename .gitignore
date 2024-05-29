@@ -39,4 +39,4 @@ yarn.lock
 vsc-extension-quickstart.md
 
 # Ignore all of .yarn directory, except for Yarn plugins (if any)
-!.yarn/plugins
+#!.yarn/plugins
